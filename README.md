@@ -12,24 +12,24 @@ This software can calculate a single and weighted value from your input data whi
 
 ## File organization<br>
 + /bin  
- * executable
+  * executable
 + /build 
- * algorithm.o
- * data.o  
- * main.o
+  * algorithm.o
+  * data.o  
+  * main.o
 + /data
- * /input/inputdata.csv
- * /output/outputdata.xls
+  * /input/inputdata.csv
+  * /output/outputdata.xls
 + /doc
- * software_design.pdf
- * software_instructions.pdf
+  * software_design.pdf
+  * software_instructions.pdf
 + /include
- * algorithm.h
- * data.h
+  * algorithm.h
+  * data.h
 + /src
- * algorithm.c
- * data.c
- * main.c
+  * algorithm.c
+  * data.c
+  * main.c
 + /test
 + makefile
 + README
