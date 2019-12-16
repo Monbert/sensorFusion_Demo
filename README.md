@@ -36,7 +36,7 @@ This software can calculate a single and weighted value from your input data whi
 
 ## Instructions<br>
 Step 1 : Download the whole project <br>
-Step 2 : cd to this project location in the terminal<br>
+Step 2 : cd to this project location in the terminal (here highly suggest you to check the data/output/outputdata.xls is empty)<br>
 Step 3 : compile all files -- terminal command "make all"<br>
 Step 4 : run the exectable file -- terminal command "make run"<br>
 Step 5 : clean all files compiled -- terminal command "make clean"<br>
