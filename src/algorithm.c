@@ -458,6 +458,7 @@ double *disregard_wrong_data(double *z,int n,double q){
     for(i=0; i<n; i++){
         if((z[i]*z[i]) < (sum*sum/n/n*q*q)){
             z_after[i] = 0.0;
+            printf("The value of sensor number[%d] is outside a prescribed range\n",i+1);
         }
         else{
             z_after[i] = z[i];

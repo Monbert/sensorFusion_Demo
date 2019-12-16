@@ -27,7 +27,8 @@ int main(){
     double output_2 = repeat(sensor_2);
     
     output_data(output_1,output_2);
-    printf("Program running successfully. Results has been written in /data/output/outputdata.xls\n");
+    printf("Program running successfully\n");
+    printf("Results has been written in /data/output/outputdata.xls \n");
 
     return 0;
 }
