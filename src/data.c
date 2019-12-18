@@ -45,6 +45,11 @@ struct sensor_list *input_data(){
     int i, j;
     double D[16][3] = {};
     fp=fopen("./data/input/inputdata.csv","r");
+    if (fp == NULL){
+        printf("error! There is no inputdata.csv file, please "
+            "check if it is existed.\n");
+        exit(0);
+    }
     fseek(fp,25L,SEEK_SET);
     for(i=0; i<16; i++)
         for(j= 0 ; j < 3; j++){
