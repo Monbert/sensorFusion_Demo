@@ -12,14 +12,14 @@ results_folder := $(shell mkdir -p data/output)
 
 #TARGET TO COMPILE ALL .c FILES
 SensorFusionAlgorithm: $(SOURCE_DIR)/algorithm.c $(SOURCE_DIR)/data.c
-	$(CC) -g -c $(CFLAGS) $(SOURCE_DIR)/algorithm.c -o build/algorithm.o 
+	$(CC) -g -c $(CFLAGS) $(SOURCE_DIR)/algorithm.c -o build/algorithm.o -lm
 	$(CC) -g -c $(CFLAGS) $(SOURCE_DIR)/data.c -o build/data.o
 
 main: $(SOURCE_DIR)/main.c
 	$(CC) -g -c $(CFLAGS) $(SOURCE_DIR)/main.c -o build/main.o
 
 main_test: $(TEST_DIR)/main.c
-	$(CC) -g -c $(CFLAGS) $(TEST_DIR)/main.c -o build/main_test.o
+	$(CC) -g -c $(CFLAGS) $(TEST_DIR)/main.c -o build/main_test.o -lm
 
 executable: build/main.o build/algorithm.o build/data.o
 	gcc -g -o bin/executable build/main.o build/algorithm.o build/data.o
