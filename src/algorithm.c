@@ -269,8 +269,7 @@ bool matrix_mul_matrix(matrix *c, matrix *a, matrix *b){
         return false;
     }
     for (int i = 0; i < a->row; i++){
-        for (int j = 0; j < b->column; j++)
-        {
+        for (int j = 0; j < b->column; j++){
             for (int k = 0; k < a->column; k++){
                 c->data[i*c->row + j] += a->data[i*a->row + k] * 
                 b->data[k*b->column + j];
@@ -327,8 +326,7 @@ void calculate_eigenvector(matrix *a, matrix *eigen_vector, matrix *eigen_values
             eigen_vector->data[i2 * eigen_vector->column + count] = sum2;
         }
         sum1 = sqrt(sum1);
-        for (int i = 0; i < eigen_vector->row; i++)
-        {
+        for (int i = 0; i < eigen_vector->row; i++){
             eigen_vector->data[i * eigen_vector->column + count] /= sum1;
         }
     }
