@@ -90,7 +90,8 @@ double test_sensordataset1(struct sensor_list sensor[]){
     for(i=0;i<8;i++){
         printf("%7.6f  ",mymatrix.data[i]);
         if(mymatrix.data[i]!=0){
-            printf("\n**test result of this function:FAIL**\n\n\n"); break;
+            printf("\n**test result of this function:FAIL**\n\n\n"); 
+            break;
         }
         else{
             mymatrix_number++;
@@ -155,12 +156,12 @@ double test_sensordataset1(struct sensor_list sensor[]){
         }
     }
     printf("**\n");
-            if(expect_value==64){
+    if(expect_value==64){
        printf("**test result of this function:PASS**\n\n\n");
-                                 }
-            else{
-                printf("**test result of this function:FAIL**\n\n\n");
-            }
+    }
+    else{
+        printf("**test result of this function:FAIL**\n\n\n");
+    }
     for(i=0,k=0;i<n&&k<num;i++){
         for(j=0; j<n;j++){
             mymatrix.data[k] = d[i][j];
@@ -200,11 +201,11 @@ double test_sensordataset1(struct sensor_list sensor[]){
     init_matrix(&temp_q, mymatrix.row, mymatrix.column);
     init_matrix(&temp_r, mymatrix.row, mymatrix.column);
     init_matrix(&eigen_value, mymatrix.row, 1);
-    for (k = 0; k < number_of_iterations; ++k){
+    for (k=0;k<number_of_iterations;++k){
         qr_decomposition(&temp, &temp_q, &temp_r);
         matrix_mul_matrix(&temp, &temp_r, &temp_q);
     }
-    for (k = 0; k < temp.column; ++k){
+    for (k=0;k<temp.column;++k){
         eigen_value.data[k] = temp.data[k * temp.column + k];
     }
     
@@ -500,7 +501,8 @@ double test_sensordataset2(struct sensor_list sensor[]){
     for(i=0;i<8;i++){
         printf("%7.6f  ",mymatrix.data[i]);
         if(mymatrix.data[i]!=0) {
-            printf("\n**test result of this function:FAIL**\n\n\n"); break;
+            printf("\n**test result of this function:FAIL**\n\n\n"); 
+            break;
         }
         else{
             mymatrix_number++;
