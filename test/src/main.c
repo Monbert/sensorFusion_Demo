@@ -16,15 +16,17 @@
 #include "../../include/data.h"
 
 /**
- * \brief  to test the correctness of our whole algorithm and 
- *    each individual function component, and do some initialization and finishing touches
- * \details to manually compute each expected outputs of each function and compare it with 
- *    our actual outputs from the function and set some evaluation metrics to see 
- *    whether each of our function meets our standard
+ * \brief  to test the correctness of our whole algorithm and each individual
+ *    function component, and do some initialization and finishing touches
+ * \details to manually compute each expected outputs of each function and 
+ *    compare it with our actual outputs from the function and set some 
+ *    evaluation metrics to see whether each of our function meets our standard
  * \param[in]  - the initial address of the struct variable sensor_list sensor_1
- * \return Success: true: each of function output meets our expected output and return a convincing result
+ * \return Success: true: each of function output meets our expected output 
+ *    and return a convincing result
  * \return Failure: some of the function output don't meet our expected output or 
- *    the process don't run normally ,or the expected final output is not what we get from the main program.
+ *    the process don't run normally ,or the expected final output is not 
+ *    what we get from the main program.
  */
 double test_sensordataset1(struct sensor_list sensor[]){
     int i,j,k,m,n,row,col,num;
@@ -427,15 +429,17 @@ double test_sensordataset1(struct sensor_list sensor[]){
 }
 
 /**
- * \brief  to test the correctness of our whole algorithm and 
- *    each individual function component, and do some initialization and finishing touches
- * \details to manually compute each expected outputs of each function and compare it with 
- *    our actual outputs from the function and set some evaluation metrics to see 
- *    whether each of our function meets our standard
+ * \brief  to test the correctness of our whole algorithm and each individual
+ *    function component, and do some initialization and finishing touches
+ * \details to manually compute each expected outputs of each function and 
+ *    compare it with our actual outputs from the function and set some 
+ *    evaluation metrics to see whether each of our function meets our standard
  * \param[in]  - the initial address of the struct variable sensor_list sensor_2
- * \return Success: true: each of function output meets our expected output and return a convincing result
+ * \return Success: true: each of function output meets our expected output 
+ *    and return a convincing result
  * \return Failure: some of the function output don't meet our expected output or 
- *    the process don't run normally ,or the expected final output is not what we get from the main program.
+ *    the process don't run normally ,or the expected final output is not 
+ *    what we get from the main program.
  */
 double test_sensordataset2(struct sensor_list sensor[]){
     int i,j,k,m,n,row,col,num;
