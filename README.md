@@ -6,12 +6,13 @@ Project of sensor fusion for course_sysc5709F<br>
 - [Introduction](#introduction)
   - [Organization](#organization)
   - [Authors](#authors)
-  - [File organization](#fileorganization)
-- [Pre-Requisites](#prerequisites)
-- [Installing and running](#installingandrunning)
+  - [File organization](#file-organization)
+- [Pre-Requisites](#pre-requisites-to-run-the-software)
+- [Installing and running](#installing-and-running)
 - [Testing](#testing)
 - [Input](#input)
 - [Output](#output)
+- [Where to find (For developers)](#where-to-find)
 
 
 ## Introduction
@@ -21,12 +22,12 @@ This software can calculate a single and weighted value from your input data whi
 Carleton University
 
 #### Authors
-Kai Xia   @Monbert<br>
-Hui Tang  @htang085<br>
+Kai Xia   [@Monbert ](https://github.com/Monbert)<br>
+Hui Tang  [@htang085](https://github.com/htang085)<br>
 
 #### File organization
-+ /bin  
-+ /build 
++ /bin (it will be automatically created when program is executed)
++ /build (it will be automatically created when program is executed)
 + /data
   * /input/inputdata.csv
   * /output/outputdata.xls
