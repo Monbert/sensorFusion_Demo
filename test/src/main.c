@@ -248,11 +248,11 @@ double test_sensordataset1(struct sensor_list sensor[]){
         }
     }
     matrix_mul_matrix(&y, &eigen_vectors, &mymatrix);
-    alpha_k = calculate_contribution_rate_of_kth_principal_component(&eigen_value,n);
+    alpha_k=calculate_contribution_rate_of_kth_principal_component(&eigen_value,n);
 
     int check_alpha_value=0;
-    double expect_alpha_value[8]=  {0.676500,0.138529,0.123636,0.023555,0.018072,0.011642,
-        0.008066,0.000000};
+    double expect_alpha_value[8]=  {0.676500,0.138529,0.123636,0.023555,
+        0.018072,0.011642,0.008066,0.000000};
     printf("**test sort_eigen_values function**\n");
     printf("**param[in]- the address of the first eigen_value and its number**\n");
     printf("**param[out]-the value of each principle component**\n");
@@ -288,8 +288,8 @@ double test_sensordataset1(struct sensor_list sensor[]){
 
     z = compute_integrated_support_degree_score(&y,alpha_k,n,m);
 
-    double expect_z_value[8]={1.513750,1.151085,1.242135,1.513750,1.312365,1.426167,
-        0.160262,1.486718};
+    double expect_z_value[8]={1.513750,1.151085,1.242135,1.513750,
+        1.312365,1.426167,0.160262,1.486718};
     int check_z_value=0;
     printf("**test comput_integrated_support_degree_score function**\n");
     printf("**param[in]- it is a pointer to a struct of matrix matrix\n"
@@ -297,8 +297,10 @@ double test_sensordataset1(struct sensor_list sensor[]){
            "n - it is a number of all sensors,\nm - it is a value that means we"
            " will select the first m principal components later**\n");
     printf("**param[out]-the support_degree_score z**\n");
-    printf("**expected result:if it run successfully : the z is exactly what we expect\n");
-    printf("**expected result:if it fails: some of the z value is not what we expect **\n");
+    printf("**expected result:if it run successfully : the z is exactly"
+        " what we expect\n");
+    printf("**expected result:if it fails: some of the z value is not what"
+        " we expect **\n");
     printf("**Factual result:**\n");
     for(i=0;i<8;i++){
         printf("%7.6f   ",z[i]);
@@ -319,8 +321,8 @@ double test_sensordataset1(struct sensor_list sensor[]){
     
     z_after = disregard_wrong_data(z,n,q);
 
-    double expect_z_after[8]={1.513750,1.151085,1.242135,1.513750,1.312365,1.426167
-        ,0.000000,1.486718
+    double expect_z_after[8]={1.513750,1.151085,1.242135,1.513750,
+        1.312365,1.426167,0.000000,1.486718
     };
     printf("**test comput_integrated_support_degree_score function **\n");
     printf("**param[in]- *z - it is a pointer to an array of all values of"
@@ -589,15 +591,16 @@ double test_sensordataset2(struct sensor_list sensor[]){
     printf("**param[in]- a pointer to a matrix being copied and a pointer"
         " to a matrix we get after copying**\n");
     printf("**param[out]-the initial address of the struct variable sensor**\n");
-    printf("**expected result:if it run successfully :mymatrix.data[i] ==temp.data[i]"
-        "&&mymatrix.column==temp.column&&mymatrix.row==temp.row\n");
+    printf("**expected result:if it run successfully :mymatrix.data[i]=="
+        "temp.data[i]&&mymatrix.column==temp.column&&mymatrix.row==temp.row\n");
     printf("**expected result:if it fails:have mymatrix.data[i]!=temp.data[i]"
            "or mymatrix.column!=temp.column or matrix.row!=temp.row**\n");
     printf("**Factual result:");
     printf("matrix being copied:**\n");
     for(i=0;i<8;i++){
         printf("%7.6f   ",temp.data[i]);
-        if(mymatrix.data[i]==temp.data[i]&&mymatrix.column==temp.column&&mymatrix.row==temp.row){
+        if(mymatrix.data[i]==temp.data[i]&&mymatrix.column==temp.column&&
+            mymatrix.row==temp.row){
             test_copy++;
         }
     }
@@ -665,7 +668,7 @@ double test_sensordataset2(struct sensor_list sensor[]){
     matrix_mul_matrix(&y, &eigen_vectors, &mymatrix);
 
 
-    alpha_k = calculate_contribution_rate_of_kth_principal_component(&eigen_value,n);
+    alpha_k=calculate_contribution_rate_of_kth_principal_component(&eigen_value,n);
 
     int check_alpha_value=0;
     double expect_alpha_value[8]=  {0.629353, 0.137459, 0.118052,
@@ -704,8 +707,8 @@ double test_sensordataset2(struct sensor_list sensor[]){
     
     z = compute_integrated_support_degree_score(&y,alpha_k,n,m);
 
-    double expect_z_value[8]={1.256115,1.300495,0.952249,1.307302,1.114786,1.178317,
-    0.152172,1.239587};
+    double expect_z_value[8]={1.256115,1.300495,0.952249,1.307302,
+        1.114786,1.178317,0.152172,1.239587};
     int check_z_value=0;
     printf("**test comput_integrated_support_degree_score function**\n");
     printf("**param[in]- it is a pointer to a struct of matrix matrix\n"
@@ -737,8 +740,8 @@ double test_sensordataset2(struct sensor_list sensor[]){
     
     z_after = disregard_wrong_data(z,n,q);
 
-    double expect_z_after[8]={1.256115,1.300495,0.952249,1.307302,1.114786,1.178317
-        ,0.000000,1.239587};
+    double expect_z_after[8]={1.256115,1.300495,0.952249,1.307302,
+        1.114786,1.178317,0.000000,1.239587};
     printf("**test comput_integrated_support_degree_score function**\n");
     printf("**param[in]- *z - it is a pointer to an array of all values of "
         "integrated support degree score\nn - it is a number of all sensors\nq -"
