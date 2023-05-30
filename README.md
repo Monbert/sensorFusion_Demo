@@ -1,5 +1,5 @@
 ## sensorFusion_Demo<br>
-Project of sensor fusion for course_sysc5709F<br>
+Project of sensor fusion <br>
 
 ## Table of Contents
 
